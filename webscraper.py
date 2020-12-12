@@ -10,6 +10,10 @@ def profanity_check(url):
     soup = bs4.BeautifulSoup(info.text, "lxml")
     my_data = ""
     my_data += soup.text
+<<<<<<< HEAD
+    data = my_data.split()
+    #print(data[0])
+=======
 
 
     word = ""
@@ -25,11 +29,12 @@ def profanity_check(url):
 
 
     print(list_of_words)
+>>>>>>> fc81e14cd79256672ec45ce698c46dd063efe144
 
     #pprint(my_data)
-    if profanity.contains_profanity(my_data):
-        profane_text = profanity.censor(my_data)
-        return f"Not for kids {profane_text}"
+    if profanity.contains_profanity(data):
+        #profane_text = profanity.censor(my_data)
+        return "Not for kids"
     else:
         return "kids, here you go"
 
