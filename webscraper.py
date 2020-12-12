@@ -10,6 +10,22 @@ def profanity_check(url):
     soup = bs4.BeautifulSoup(info.text, "lxml")
     my_data = ""
     my_data += soup.text
+
+
+    word = ""
+    list_of_words = []
+    for i in range(len(soup.text)-1):
+        #print(soup.text[i])
+        if((soup.text[i] == ' ') and (len(word) > 0)):
+            list_of_words.append(word)
+            word = ""
+        else:
+            if(soup.text[i] + soup.text[i+1] != "\n" ):
+                word += soup.text[i]
+
+
+    print(list_of_words)
+
     #pprint(my_data)
     if profanity.contains_profanity(my_data):
         profane_text = profanity.censor(my_data)
@@ -17,8 +33,4 @@ def profanity_check(url):
     else:
         return "kids, here you go"
 
-print(profanity_check("https://www.commonsensemedia.org/lists/kid-safe-browsers-and-search-sites"))
-
-TODOS
- - put all bad words in a list (append it to list)
- 
+print(profanity_check(Enter URL))
