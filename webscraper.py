@@ -41,8 +41,5 @@ def data(url):
 
     #return [count, mal_words]
 
-
-
-    
 print(data("https://www.dictionary.com/browse/beauty"))
 #data("https://www.dictionary.com/browse/fuck")
