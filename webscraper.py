@@ -5,7 +5,7 @@ from pprint import pprint
 from better_profanity import profanity
 
 def profanity_check(url):
-    # data from the website we will scrape 
+    # data from the website we will scrape
     info = requests.get(url)
     soup = bs4.BeautifulSoup(info.text, "lxml")
     my_data = ""
@@ -16,6 +16,9 @@ def profanity_check(url):
         return f"Not for kids {profane_text}"
     else:
         return "kids, here you go"
-   
+
 print(profanity_check("https://www.commonsensemedia.org/lists/kid-safe-browsers-and-search-sites"))
-#data("https://www.dictionary.com/browse/fuck")
+
+TODOS
+ - put all bad words in a list (append it to list)
+ 
