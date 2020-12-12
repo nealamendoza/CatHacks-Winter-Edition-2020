@@ -1,5 +1,5 @@
 import pymongo
-from keys import *
+#from keys import *
 from pymongo import MongoClient
 from webscraper import *
 
