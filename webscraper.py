@@ -13,3 +13,23 @@ def profanity_check(url):
     my_data = ""
     my_data += soup.text
     data = my_data.split()
+    for i in range(len(data)):
+        if(profanity.contains_profanity(data[i])):
+            return False
+    return True
+
+
+#Counts the Number of vulgar words in the url
+def getNumOfBadWords(url):
+    num_of_bad_words = 0
+    info = requests.get(url)
+    soup = bs4.BeautifulSoup(info.text, "lxml")
+    my_data = ""
+    my_data += soup.text
+    data = my_data.split()
+    for i in range(len(data)):
+        if profanity.contains_profanity(data[i]):
+            print(data[i])
+            num_of_bad_words += 1
+
+    return num_of_bad_words
