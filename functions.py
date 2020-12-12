@@ -60,10 +60,3 @@ def scanWebsite(userUrl):
         add_url_to_db(urlObject)
         print('"status": "Created New Entry in Database"')
         return retrieve_data_from_db(url)
-
-
-
-
-url = (input(""))
-
-print(scanWebsite(url))
