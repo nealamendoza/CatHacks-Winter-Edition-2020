@@ -1,7 +1,7 @@
 import requests
 from flask import Flask, render_template, flash, request
-from functions import *
-from webscraper import *
+#from functions import *
+#from webscraper import *
 app = Flask(__name__)
 
 @app.route('/')
@@ -37,6 +37,10 @@ def scan():
     isSafe = isSafe,
     num_of_bad_words = num_of_bad_words
     )
+
+@app.route('/about', methods=['GET', 'POST'])
+def about():
+    return render_template('about.html')
 
 
 if __name__ == "__main__":
