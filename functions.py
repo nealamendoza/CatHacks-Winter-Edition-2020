@@ -1,7 +1,8 @@
 import pymongo
-#from keys import *
+from keys import *
 from pymongo import MongoClient
 from webscraper import *
+from pprint import pprint
 
 
 db = cluster["test"]
@@ -60,8 +61,9 @@ def scanWebsite(userUrl):
     url = userUrl
     condition = check_url_in_db(url)
     if(condition == True):
-        print(' "status": "Already Added to Database"')
+        print('\n "status": "Already Added to Database"\n')
         urlObject = retrieve_data_from_db(url)
+        pprint(urlObject)
         return urlObject
     else:
         urlObject = {
@@ -74,5 +76,7 @@ def scanWebsite(userUrl):
         num_of_bad_words = getNumOfBadWords(url)
         urlObject['num_of_bad_words'] = num_of_bad_words
         add_url_to_db(urlObject)
-        print('"status": "Created New Entry in Database"')
+        print('\n"status": "Created New Entry in Database" \n')
+        pprint(urlObject)
+
         return retrieve_data_from_db(url)

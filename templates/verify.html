@@ -19,26 +19,37 @@
             <a href="/scan" class="nav-link active">Verify</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">About</a>
+            <a href="/about" class="nav-link">About</a>
           </li>
         </ul>
       </div>
     </nav>
+    <div class="text-center my-5">
+      <img src="/static/images/title.png" alt="Title">
+      <h3>Use our website scanner to detect profanity in a webpage!</h3>
+    </div>
     <!-- Content -->
     <div class="container">
-      <!--
-      NEALA
-        - Create text that briefly describes the website
-        <h1>Safespace is a website created to check if websites are appropriate to show to children. By pasting a URL, Space <h>
-        - Create text asking user to enter their URL in
-        - Create HTML form for flask to read in URL as well as a button to submit
-      -->
-      <form class = "text-center" action="verify.html">
+      <form method="post"class = "text-center my-5" action="/scan">
         <label for="urlLink">Insert URL:</label>
-        <input size="50" type="text">
+        <input size="50" type="post" name = "url">
         <input type="submit" value="Submit">
       </form>
 
+      <div class="container my-5">
+        <div class="card">
+          <div class="card-header">
+            <h1>RESULTS</h1>
+          </div>
+          <div class="card-body">
+            <h3>{{url}}</h3>
+            <hr>
+            <h3>{{isSafe}}</h3>
+            <hr>
+            <h3>{{num_of_bad_words}}</h3>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
