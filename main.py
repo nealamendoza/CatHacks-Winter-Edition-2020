@@ -1,7 +1,7 @@
 import requests
 from flask import Flask, render_template, flash, request
-#from functions import *
-#from webscraper import *
+from functions import *
+from webscraper import *
 app = Flask(__name__)
 
 @app.route('/')
