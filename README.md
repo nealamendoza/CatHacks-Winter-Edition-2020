@@ -36,3 +36,14 @@ We learned more about Beautiful Soup and what we can do with web scraping. We al
 ## What's next for SafeSpace
 
 Adding an AI that would detect if images in the website would be appropriate or not. Deciding if a website was appropriate or not by the text is a good start, but many webpages have images and videos all over them. So, it would be a great feature to detect if images in a website were suitable for the younger audience or not.
+
+
+### Contributers
+Name: Kyle Java
+Discord: kylejava#5030
+
+Name: Neala Mendoza
+Discord: nealamendoza#1331
+
+Name: Anish Dhandore
+Discord: kiddo#5542
