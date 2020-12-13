@@ -41,5 +41,5 @@ def data(url):
 
     #return [count, mal_words]
 
-print(data("https://www.dictionary.com/browse/beauty"))
+print(data("https://lowvelder.co.za/424505/advantages-time-management/#:~:text=Time%20management%20helps%20children%20prioritize,decisions%20and%20work%20more%20efficiently."))
 #data("https://www.dictionary.com/browse/fuck")
