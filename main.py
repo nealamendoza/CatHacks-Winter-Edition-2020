@@ -29,7 +29,7 @@ def scan():
         if(urlObject['num_of_bad_words'] == 0):
             num_of_bad_words = "No innapropriate language was detected"
         else:
-            num_of_bad_words = "Number of innapropriate words detected: " + str(urlObject['num_of_bad_words'])
+            num_of_bad_words = "Number of inappropriate words detected: " + str(urlObject['num_of_bad_words'])
 
     return render_template(
     'verify.html',
