@@ -30,6 +30,7 @@ def getNumOfBadWords(url):
     for word in range(len(my_data)):
         if(my_data[word] in abusive_words):
             count += 1
+            print(my_data[word])
         #for abusive_word in range(len(abusive_words)):
             #if my_data[word] == abusive_words[abusive_word]:
             #    count += 1
